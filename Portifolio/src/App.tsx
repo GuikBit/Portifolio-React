@@ -2,13 +2,14 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import NumberTicker from './components/ui/number-ticker'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className='flex justify-center'>
+      <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -21,6 +22,11 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+
+        <p className="whitespace-pre-wrap text-8xl font-bold tracking-tighter text-black dark:text-white">
+          <NumberTicker value={100} />
+        </p>
+
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
