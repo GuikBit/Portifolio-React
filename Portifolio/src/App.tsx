@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='flex justify-center'>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -18,14 +18,14 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <div className="card bg-white">
+        <button className='whitespace-pre-wrap text-8xl font-medium bg-white dark:bg-black tracking-tighter text-white ' onClick={() => setCount((count) => count + 1)}>
+         
+          <NumberTicker value={count} decimalPlaces={2}/>
+         
         </button>
 
-        <p className="whitespace-pre-wrap text-8xl font-bold tracking-tighter text-black dark:text-white">
-          <NumberTicker value={100} />
-        </p>
+        
 
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
